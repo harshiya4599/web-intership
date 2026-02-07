@@ -1,0 +1,14 @@
+# Node
+node_modules/
+dist/
+
+# Environment
+.env
+
+# IDEs
+.vscode/
+.history/
+
+# OS
+.DS_Store
+Thumbs.db
