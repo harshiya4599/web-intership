@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2 - Responsive Layout, Form, and To-Do</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script src="script1.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"> Task -2</div>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-btn is-active" type="button" data-view="home">Home</button>
+      <button class="nav-btn" type="button" data-view="todo">To-Do List</button>
+      <button class="nav-btn" type="button" data-view="contact">Contact Form</button>
+      <button class="nav-btn" type="button" data-view="registration">Registration Form</button>
+    </nav>
+  </header>
+
+  <main class="view-container">
+    <section class="panel section-view hero" id="home-view">
+      <h1>Welcome to Task 2 Interactive Webpage</h1>
+      <p>
+        Build, test, and practice your frontend skills with a responsive layout,
+        live DOM interactions, and form handling in one place.
+      </p>
+      <p>
+        Use the navigation buttons below to switch between the To-Do List,
+        Contact Form, and Registration Form views.
+      </p>
+      <div class="home-links" aria-label="Quick links">
+        <button class="quick-link-btn" type="button" data-view="todo">Open To-Do List</button>
+        <button class="quick-link-btn" type="button" data-view="registration">Open Registration Form</button>
+        <button class="quick-link-btn" type="button" data-view="contact">Open Contact Form</button>
+      </div>
+
+      <div class="home-stats">
+        <article class="stat-card">
+          <h3>4 Main Sections</h3>
+          <p>Home, To-Do, Contact, and Registration all in one responsive app.</p>
+        </article>
+        <article class="stat-card">
+          <h3>Live Validation</h3>
+          <p>Contact and registration forms include JavaScript checks and feedback.</p>
+        </article>
+        <article class="stat-card">
+          <h3>Dynamic To-Do</h3>
+          <p>Add and remove tasks instantly without reloading the page.</p>
+        </article>
+      </div>
+
+      <div class="home-grid">
+        <article class="home-block">
+          <h2>What You Can Practice</h2>
+          <ul>
+            <li>Flexbox navigation that wraps on smaller screens</li>
+            <li>Section-based interface with dynamic view switching</li>
+            <li>DOM event handling and form validation logic</li>
+          </ul>
+        </article>
+        <article class="home-block">
+          <h2>Project Objective</h2>
+          <p>
+            This Task 2 page demonstrates how HTML, CSS, and JavaScript work
+            together to build interactive student-friendly web interfaces.
+          </p>
+          <p>
+            Use it as a base to add new UI sections, stronger validation rules,
+            and improved accessibility.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel section-view is-hidden" id="todo-view">
+      <h2>Dynamic To-Do List</h2>
+      <div class="todo-input">
+        <input id="task-input" type="text" placeholder="Add a new task" />
+        <button id="add-task" type="button">Add Task</button>
+      </div>
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="panel section-view is-hidden" id="contact-view">
+      <h2>Contact Form</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required />
+
+        <label for="rollno">Roll No</label>
+        <input id="rollno" name="rollno" type="text" placeholder="e.g. 23BFA05110 " required />
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Your full address" required></textarea>
+
+        <fieldset class="radio-group">
+          <legend>Gender</legend>
+          <label>
+            <input type="radio" name="gender" value="male" required />
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" />
+            Female
+          </label>
+        </fieldset>
+
+        <label for="course">Option</label>
+        <select id="course" name="course" required>
+          <option value="">Select an option</option>
+          <option value="bca">BCA</option>
+          <option value="bsc">BSc</option>
+          <option value="bcom">BCom</option>
+          <option value="ba">BA</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <button type="submit">Submit</button>
+        <p id="form-message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel section-view is-hidden" id="registration-view">
+      <h2>Registration Form</h2>
+      <form id="registration-form" novalidate>
+        <label for="reg-name">Full Name</label>
+        <input id="reg-name" name="reg-name" type="text" placeholder="Enter your full name" required />
+
+        <label for="reg-email">Email</label>
+        <input id="reg-email" name="reg-email" type="email" placeholder="you@example.com" required />
+
+        <label for="reg-password">Password</label>
+        <input id="reg-password" name="reg-password" type="password" placeholder="At least 6 characters" required />
+
+        <label for="reg-department">Department</label>
+        <select id="reg-department" name="reg-department" required>
+          <option value="">Select department</option>
+          <option value="cse">CSE</option>
+          <option value="ece">ECE</option>
+          <option value="eee">EEE</option>
+          <option value="mech">MECH</option>
+        </select>
+
+        <button type="submit">Register</button>
+        <p id="registration-message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Task 2 Webpage | Contact Form and To-Do List Demo</p>
+  </footer>
+</body>
+</html>
